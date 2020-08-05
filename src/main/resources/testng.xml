@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GoIbibo Application Test Suite" parallel="tests" verbose="1"
+	configfailurepolicy="continue" thread-count="2">
+
+	<!-- Possible Parameters and Values -->
+	<!-- ExecutionMode = API,LOCAL,GRID,MOBILE,PERFECTO,FASTEST,SAUCELABS,TESTOBJECT -->
+	<!-- ToolName= APPIUM,REMOTEDRIVER -->
+	<!-- MobileExecutionPlatform = ANDROID, IOS, WEB_ANDROID, WEB_IOS -->
+	<!-- BrowserName = CHROME,FIREFOX,INTERNET_EXPLORER,EDGE -->
+	<!-- DeviceName = "Please give the respective deviceName/UDID" OR ManufacturerName 
+		= Apple etc., ModelName = iPhone 7etc., -->
+	<!-- MobileOsVersion ="" -->
+	<!-- BrowserVersion ="" (Applicable Only if ExecutionMode is GRID or SAUCELABS 
+		or Fastest Desktop) -->
+	<!-- Platform =WINDOWS etc., (Applicable Only if ExecutionMode is GRID or 
+		SAUCELABS or Fastest Desktop) -->
+	<!-- PlatformVersion=8,10 etc.,(Applicable for Perfecto Desktop) -->
+
+	<test name="GoIbibo App Test cases">
+		<parameter name="ExecutionMode" value="LOCAL" />
+		<parameter name="BrowserName" value="CHROME" />
+		<classes>
+			<class name="com.goibibo.testcases.ApplicationPageTest" />
+			<class name="com.goibibo.testcases.SearchResultPageTest" />
+			<class name="com.goibibo.testcases.BookFlightPageTest" />
+			<class name="com.goibibo.testcases.PaymentPageTest" />
+		</classes>
+	</test>
+
+</suite>
