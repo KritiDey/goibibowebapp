@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [GoIbibo Application Test Suite]" parallel="tests">
+  <test name="GoIbibo App Test cases(failed)" parallel="tests">
+    <parameter name="BrowserName" value="CHROME"/>
+    <parameter name="ExecutionMode" value="LOCAL"/>
+    <classes>
+      <class name="com.goibibo.testcases.ApplicationPageTest">
+        <methods>
+          <include name="validateAppPageAndenterItineraryDetailsTest"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.goibibo.testcases.ApplicationPageTest -->
+      <class name="com.goibibo.testcases.BookFlightPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="enterBookingDetails"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.goibibo.testcases.BookFlightPageTest -->
+      <class name="com.goibibo.testcases.PaymentPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="chooseWalletTest"/>
+        </methods>
+      </class> <!-- com.goibibo.testcases.PaymentPageTest -->
+      <class name="com.goibibo.testcases.SearchResultPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="selectFlightTest"/>
+        </methods>
+      </class> <!-- com.goibibo.testcases.SearchResultPageTest -->
+    </classes>
+  </test> <!-- GoIbibo App Test cases(failed) -->
+</suite> <!-- Failed suite [GoIbibo Application Test Suite] -->

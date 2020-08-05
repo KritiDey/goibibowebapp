@@ -8,6 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import com.goibibo.util.TestUtil;
 
@@ -34,8 +36,14 @@ public class BasePage {
 	public static void initialization() {
 		String browserName= prop.getProperty("browser");
 		if (browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\kriti\\eclipse-workspace1\\GoIbibo\\resouces\\drivers\\chromedriver_83.exe");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("ChromeDriverPath"));
 			driver = new ChromeDriver();
+		} else if (browserName.equals("internetexplorer")) {
+			System.setProperty("webdriver.ie.driver", prop.getProperty("InternetExplorerDriverPath"));
+			driver = new InternetExplorerDriver();
+		} else if (browserName.equals("firefox")) {
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("GeckoDriverPath"));
+			driver = new FirefoxDriver(); 
 		}
 		
 		
