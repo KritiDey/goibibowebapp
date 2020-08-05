@@ -22,7 +22,7 @@ public class BasePage {
 		
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream ("C:\\Users\\kriti\\eclipse-workspace1\\GoIbibo\\src\\main\\java\\com\\cucumber\\configuration\\config.properties");
+			FileInputStream ip = new FileInputStream ("C:\\Users\\kriti\\eclipse-workspace1\\GoIbiboApp\\src\\main\\java\\com\\goibibo\\configuration\\config.properties");
 			prop.load(ip);
 			
 		} catch (FileNotFoundException e) {
